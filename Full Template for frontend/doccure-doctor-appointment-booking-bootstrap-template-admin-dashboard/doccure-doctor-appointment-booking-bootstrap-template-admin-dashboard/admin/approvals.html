@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:20 GMT -->
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+        <title>StyleTory - Admin Dashboard</title>
+
+        <!-- Favicon -->
+        <link type="image/x-icon" href="assets/img/favicon.ico" rel="icon" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+        <!-- Feathericon CSS -->
+        <link rel="stylesheet" href="assets/css/feathericon.min.css" />
+
+        <link rel="stylesheet" href="assets/plugins/morris/morris.css" />
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="main-wrapper">
+            <!-- Header -->
+            <div class="header">
+                <!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+                        <img src="assets/img/styletory.jpg" alt="Logo" />
+                    </a>
+                    <a href="index.html" class="logo logo-small">
+                        <img src="assets/img/small-logo.jpg" alt="Logo" width="30" height="30" />
+                    </a>
+                </div>
+                <!-- /Logo -->
+
+                <a href="javascript:void(0);" id="toggle_btn">
+                    <i class="fe fe-text-align-left"></i>
+                </a>
+
+                <div class="top-nav-search">
+                    <form>
+                        <input type="text" class="form-control" placeholder="Search here" />
+                        <button class="btn" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <a class="mobile_btn" id="mobile_btn">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- /Mobile Menu Toggle -->
+
+                <!-- Header Right Menu -->
+                <ul class="nav user-menu">
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown has-arrow">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/sir.PNG"
+                                    width="31" alt="sir jee" /></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="user-header">
+                                <div class="avatar avatar-sm">
+                                    <img src="assets/img/profiles/sir.PNG" alt="User Image"
+                                        class="avatar-img rounded-circle" />
+                                </div>
+                                <div class="user-text">
+                                    <h6>Sir Sulaiman</h6>
+                                    <p class="text-muted mb-0">Administrator</p>
+                                </div>
+                            </div>
+                            <!-- <a class="dropdown-item" href="profile.html">My Profile</a>
+                							<a class="dropdown-item" href="settings.html">Settings</a>
+                							<a class="dropdown-item" href="login.html">Logout</a> -->
+                            <a class="dropdown-item" href="#">My Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                    <!-- /User Menu -->
+                </ul>
+                <!-- /Header Right Menu -->
+            </div>
+            <!-- /Header -->
+
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <ul>
+                            <li class="menu-title">
+                                <span>Main</span>
+                            </li>
+                            <li>
+                                <a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="approvals.html"><i class="fa fa-user-circle"></i> <span>Approvals</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fe fe-users"></i> <span>Specialities</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fe fe-user"></i> <span>Patients</span></a>
+                            </li>
+                            <!--
+        							<li> 
+        								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
+        							</li>
+        							<li> 
+        								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
+        							</li>
+        							<li> 
+        								<a href="settings.html"><i class="fe fe-vector"></i> <span>Settings</span></a>
+        							</li>
+        							<li class="submenu">
+        								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li><a href="invoice-report.html">Invoice Reports</a></li>
+        								</ul>
+        							</li>
+        							<li class="menu-title"> 
+        								<span>Pages</span>
+        							</li>
+        							<li> 
+        								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+        							</li>
+        							<li class="submenu">
+        								<a href="#"><i class="fe fe-document"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li><a href="login.html"> Login </a></li>
+        									<li><a href="register.html"> Register </a></li>
+        									<li><a href="forgot-password.html"> Forgot Password </a></li>
+        									<li><a href="lock-screen.html"> Lock Screen </a></li>
+        								</ul>
+        							</li>
+        							<li class="submenu">
+        								<a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li><a href="error-404.html">404 Error </a></li>
+        									<li><a href="error-500.html">500 Error </a></li>
+        								</ul>
+        							</li>
+        							<li> 
+        								<a href="blank-page.html"><i class="fe fe-file"></i> <span>Blank Page</span></a>
+        							</li>
+        							<li class="menu-title"> 
+        								<span>UI Interface</span>
+        							</li>
+        							<li> 
+        								<a href="components.html"><i class="fe fe-vector"></i> <span>Components</span></a>
+        							</li>
+        							<li class="submenu">
+        								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li><a href="form-basic-inputs.html">Basic Inputs </a></li>
+        									<li><a href="form-input-groups.html">Input Groups </a></li>
+        									<li><a href="form-horizontal.html">Horizontal Form </a></li>
+        									<li><a href="form-vertical.html"> Vertical Form </a></li>
+        									<li><a href="form-mask.html"> Form Mask </a></li>
+        									<li><a href="form-validation.html"> Form Validation </a></li>
+        								</ul>
+        							</li>
+        							<li class="submenu">
+        								<a href="#"><i class="fe fe-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li><a href="tables-basic.html">Basic Tables </a></li>
+        									<li><a href="data-tables.html">Data Table </a></li>
+        								</ul>
+        							</li>
+        							<li class="submenu">
+        								<a href="javascript:void(0);"><i class="fe fe-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
+        								<ul style="display: none;">
+        									<li class="submenu">
+        										<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
+        										<ul style="display: none;">
+        											<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
+        											<li class="submenu">
+        												<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
+        												<ul style="display: none;">
+        													<li><a href="javascript:void(0);">Level 3</a></li>
+        													<li><a href="javascript:void(0);">Level 3</a></li>
+        												</ul>
+        											</li>
+        											<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
+        										</ul>
+        									</li>
+        									<li>
+        										<a href="javascript:void(0);"> <span>Level 1</span></a>
+        									</li>
+        								</ul>
+        							</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sidebar -->
+
+
+            <!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Recent Orders -->
+                            <div class="card card-table">
+                                <div class="card-header">
+                                    <h4 class="card-title">Appointment List</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-center mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Saloons Name</th>
+                                                    <th>Speciality</th>
+                                                    <th class="text-center">Staff Members</th>
+                                                    <th class="text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="assets/img/doctors/1.jpg"
+                                                                    alt="User Image" /></a>
+                                                            <a href="#">Depilex</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>Hair Dresser</td>
+                                                    <td class="text-center">
+                                                        4
+                                                    </td>
+
+
+                                                    <td class="text-center">
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic mixed styles example">
+                                                            <button type="button"
+                                                                class="btn btn-success">Accept</button>
+
+                                                            <button type="button" class="btn btn-danger">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="assets/img/doctors/2.jpg"
+                                                                    alt="User Image" /></a>
+                                                            <a href="#">Toni And Guy</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>Hair Cut</td>
+                                                    <td class="text-center">
+                                                        9
+                                                    </td>
+
+
+                                                    <td class="text-center">
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic mixed styles example">
+                                                            <button type="button"
+                                                                class="btn btn-success">Accept</button>
+
+                                                            <button type="button" class="btn btn-danger">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="assets/img/doctors/3.jpg"
+                                                                    alt="User Image" /></a>
+                                                            <a href="#">Micheal K Salon</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>Nails Care</td>
+                                                    <td class="text-center">
+                                                        7
+                                                    </td>
+
+
+                                                    <td class="text-center">
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic mixed styles example">
+                                                            <button type="button"
+                                                                class="btn btn-success">Accept</button>
+
+                                                            <button type="button" class="btn btn-danger">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="assets/img/doctors/4.jpg"
+                                                                    alt="User Image" /></a>
+                                                            <a href="#">
+                                                                Khawar Riaz Mens Saloon</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>Skin Care</td>
+                                                    <td class="text-center">
+                                                        8
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic mixed styles example">
+                                                            <button type="button"
+                                                                class="btn btn-success">Accept</button>
+
+                                                            <button type="button" class="btn btn-danger">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h2 class="table-avatar">
+                                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                                    class="avatar-img rounded-circle"
+                                                                    src="assets/img/doctors/5.jpg"
+                                                                    alt="User Image" /></a>
+                                                            <a href="#">Tariq Amin</a>
+                                                        </h2>
+                                                    </td>
+                                                    <td>Beard Specialists </td>
+                                                    <td class="text-center">
+                                                        6
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group" role="group"
+                                                            aria-label="Basic mixed styles example">
+                                                            <button type="button"
+                                                                class="btn btn-success">Accept</button>
+
+                                                            <button type="button" class="btn btn-danger">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Recent Orders -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /Main Wrapper -->
+
+        </div>
+        <!-- /Main Wrapper -->
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+        <!-- Bootstrap Core JS -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Slimscroll JS -->
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="assets/js/script.js"></script>
+
+    </body>
+
+    <!-- Mirrored from dreamguys.co.in/demo/doccure/admin/form-basic-inputs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:54 GMT -->
+
+</html>
